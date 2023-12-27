@@ -37,13 +37,13 @@ if __name__ == '__main__':
                         value="Insert website copy here").strip()
 
     intent = st.radio(
-        "Set your tone 👉",
+        "Set the tone 👉",
         key="intent",
         options=["general", "formal", "casual", "long", "short"],
         horizontal=True
     )
 
-    st.button(label="Rewrite ✍️", on_click=lambda: get_suggestions(text, intent=intent))
+    st.button(label="Rewrite website copy", on_click=lambda: get_suggestions(text, intent=intent))
     if "rewrite_rewritten_texts" in st.session_state:
         suggestions = st.session_state["rewrite_rewritten_texts"]
 
