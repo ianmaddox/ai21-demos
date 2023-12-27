@@ -4,7 +4,7 @@ from constants import ai21
 import requests  # You might need to import requests
 
 st.set_page_config(
-    page_title="AI21 Studio - AI Demos",
+    page_title="Moving Along Website Generator - SEO Keywords",
 )
 
 def get_chat_suggestions(text, system_description):
@@ -33,12 +33,12 @@ def get_chat_suggestions(text, system_description):
 if __name__ == '__main__':
     apply_studio_style()
 
-    st.title("AI21 Studio - AI Demos")
+    st.title("Moving Along Website Generator - SEO Keywords")
 
     # Existing Streamlit interface for the rewrite tool
 
     # New interface for the chat API
-    st.header("AI21 Chat API Demo")
+    st.header("SEO Keyword Generator")
     user_input = st.text_area("Enter your text for SEO keyword generation:",
                               placeholder="Enter text here")
     system_description = "You are a SEO keyword generator. Your job is to help you turn business website text into SEO keywords. For example, if you have a business description like this: \"We are a fintech startup that provides market analysis tools for financial institutions.\" You might make SEO keywords like these: \"fintech, market analysis, financial institutions, startup, AI, ML, banking, charts, data\"."

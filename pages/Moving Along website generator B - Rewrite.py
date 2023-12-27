@@ -30,7 +30,7 @@ def show_prev(cycle_length):
 if __name__ == '__main__':
     apply_studio_style()
 
-    st.title("The Rewrite Tool")
+    st.title("Website copy rewriter")
     text = st.text_area(label="Paste your existing website copy and we will rewrite it to sound fresh and new:",
                         max_chars=640,
                         placeholder="Insert website copy here",
