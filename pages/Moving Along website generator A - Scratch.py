@@ -319,7 +319,7 @@ if __name__ == '__main__':
     if "short-form-result" in st.session_state:
         result = st.session_state["short-form-result"]["completion"]
         st.text("")
-        st.text_area("Generated Product Description", result, height=200)
+        st.text_area("Generated Product Description", result.strip(), height=200)
 
 
 
