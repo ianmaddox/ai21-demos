@@ -252,7 +252,7 @@ Write engaging and promotional website descriptions for small business website b
 Write engaging and promotional website descriptions for small business website based on business details\n
 '''
 
-def query(prompt):
+def query(prompt, temperature):
     config = {
         "numResults": 1,
         "minTokens": 30,
