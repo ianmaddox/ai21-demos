@@ -256,7 +256,7 @@ def query(prompt):
     config = {
         "numResults": 1,
         "minTokens": 30,
-        "maxTokens": 64,
+        "maxTokens": 90,
         "temperature": 0.65,
         "topKReturn": 0,
         "topP":0.98,
