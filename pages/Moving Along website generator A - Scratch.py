@@ -257,7 +257,7 @@ def query(prompt):
         "numResults": 1,
         "minTokens": 30,
         "maxTokens": 90,
-        "temperature": 0.65,
+        "temperature": temperature,
         "topKReturn": 0,
         "topP":0.98,
         "countPenalty": {
@@ -305,13 +305,15 @@ if __name__ == '__main__':
     inp_services = st.text_area("List your services here:", value="- Custom shoes\n- Custom boots\n- Shoe repair\n- Shoe cleaning\n- Shoe accessories")
     inp_benefits = st.text_area("List the benefits of your services here:", value="- High quality\n- Professional\n- Friendly\n- Hand crafted by magical elves\n- Guaranteed 98% curse free")
 
+    temperature = st.slider('Temperature:', min_value=0.0, max_value=1.0, value=0.65)
+
     prompt = base_prompt + f"Business name:{inp_business_name}\nLocation:{inp_location}\nServices:{inp_services}\nBenefits:{inp_benefits}\nCopy:"
 
     if st.button(label="Generate Copy"):
         st.session_state["short-form-save_results_ind"] = []
         with st.spinner("Loading..."):
             st.session_state["short-form-result"] = {
-                "completion": query(prompt),
+                "completion": query(prompt, temperature),
             }
 
     if "short-form-result" in st.session_state:
