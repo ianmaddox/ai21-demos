@@ -32,9 +32,15 @@ if __name__ == '__main__':
 
     st.title("Website copy rewriter")
     text = st.text_area(label="Paste your existing website copy and we will rewrite it to sound fresh and new:",
-                        max_chars=640,
+                        max_chars=500,
                         placeholder="Insert website copy here",
                         value="Insert website copy here").strip()
+
+    # Trim text down to 500 characters
+    if len(text) > 500:
+        text = text[:500].strip()
+        st.warning("Text trimmed down to 500 characters")
+        #todo: Tokenize text and reword in paragraph chunks
 
     intent = st.radio(
         "Set the tone 👉",
