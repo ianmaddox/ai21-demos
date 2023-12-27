@@ -1,0 +1,5 @@
+.vscode
+.idea
+.streamlit
+.streamlit/secrets.toml
+.python-version
